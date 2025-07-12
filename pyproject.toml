@@ -1,0 +1,18 @@
+[project]
+name = "neurorm"
+version = "0.1.0"
+description = "Object Relational Mappings for Neuroimaging Outputs."
+readme = "README.md"
+authors = [{ name = "Patrick Sadil", email = "psadil@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = ["nibabel>=5.3.2", "polars>=1.31.0", "pydantic>=2.11.7"]
+
+[project.scripts]
+neurorm = "neurorm:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pytest>=8.4.1"]
